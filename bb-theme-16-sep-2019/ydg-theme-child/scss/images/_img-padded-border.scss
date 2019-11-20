@@ -1,0 +1,22 @@
+/* Image Style Padded Border */
+
+.fl-photo {
+	.fl-photo-content {
+		img {
+			border: 1px solid rgba(0,0,0,0.15);
+			padding: 3px;
+		}
+	}
+}
+.fl-post {
+	.fl-post-thumb img {
+		border: 1px solid rgba(0,0,0,0.15);
+		padding: 3px;
+	}
+}
+.woocommerce, .woocommerce-page {
+	ul.products li.product a img, div.product div.images img {
+		border: 1px solid rgba(0,0,0,0.15);
+		padding: 3px;
+	}
+}

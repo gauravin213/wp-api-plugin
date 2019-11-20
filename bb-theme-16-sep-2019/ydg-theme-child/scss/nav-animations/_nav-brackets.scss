@@ -1,0 +1,34 @@
+/* Nav Brackets Effect */
+
+.fl-page-header .fl-page-nav-wrap .navbar-nav > li {
+	> a {
+		position: relative;
+	}
+
+	> a::before,
+	> a::after {
+		display: inline-block;
+		position: absolute;
+		opacity: 0;
+		transition: all ease 0.2s;
+	}
+
+	> a::before {
+		content: '[';
+		left: 0;
+		@include transform(translateX(20px));
+	}
+	> a::after {
+		content: ']';
+		right: 0;
+		@include transform(translateX(-20px));
+	}
+
+	> a:hover::before,
+	> a:hover::after,
+	> a:focus::before,
+	> a:focus::after {
+		opacity: 1;
+		@include transform(translateX(0));
+	}
+}

@@ -1,0 +1,37 @@
+/* Image Style Bottom Border */
+
+.fl-photo {
+	.fl-photo-content {
+		img {
+			border: 0;
+			border-bottom: 5px solid $pri-color;
+		}
+	}
+}
+.fl-post {
+	.fl-post-thumb img {
+		border: 0;
+		border-bottom: 5px solid $pri-color;
+	}
+}
+.woocommerce, .woocommerce-page {
+	ul.products li.product a img, ul.products li.product a:hover img, div.product div.images img {
+		border: 0;
+		border-bottom: 5px solid $pri-color;
+	}
+}
+
+.alt-row, .alt-col {
+	.fl-photo {
+		.fl-photo-content {
+			img {
+				border-bottom: 5px solid $sec-color;
+			}
+		}
+	}
+	.woocommerce, .woocommerce-page {
+		ul.products li.product a img, div.product div.images img {
+			border-bottom: 5px solid $sec-color;
+		}
+	}
+}

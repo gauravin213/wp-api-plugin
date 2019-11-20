@@ -1,0 +1,115 @@
+/* Nav Line */
+
+.fl-page-header .fl-page-nav-wrap .navbar-nav > li {
+	> a::after {
+		position: absolute;
+		top: 80%;
+		left: 30%;
+		width: 40%!important;
+		height: 2px;
+		background: $accent-color;
+		content: '';
+		opacity: 0;
+		transition: all ease 0.4s;
+	}
+	> a:hover::after,
+	> a:focus::after {
+		width: 100%;
+		opacity: 1;
+	}
+
+	&.current-menu-item {
+		> a::after {
+			width: 100%;
+			opacity: 1;
+		}
+		> a:hover::after {
+			opacity: 1;
+		}
+	}
+}
+
+.fl-builder-content .fl-node-5aa824a7ebc4c .menu > li {
+	> a::after {
+		position: absolute;
+		top: 80%;
+		left: 30%;
+		width: 40%!important;
+		height: 2px;
+		background: $accent-color;
+		content: '';
+		opacity: 0;
+		transition: all ease 0.4s;
+	}
+	> a:hover::after,
+	> a:focus::after {
+		width: 100%;
+		opacity: 1;
+	}
+
+	&.current-menu-item {
+		> a::after {
+			width: 100%;
+			opacity: 1;
+		}
+		> a:hover::after {
+			opacity: 1;
+		}
+	}
+}
+
+.fl-builder-content .fl-node-5aa9713c514ab .fl-menu .menu > li {
+	> a::after {
+		position: absolute;
+		top: 80%;
+		left: 30%;
+		width: 40%!important;
+		height: 2px;
+		background: $accent-color;
+		content: '';
+		opacity: 0;
+		transition: all ease 0.4s;
+	}
+	> a:hover::after,
+	> a:focus::after {
+		width: 100%;
+		opacity: 1;
+	}
+
+	&.current-menu-item {
+		> a::after {
+			width: 100%;
+			opacity: 1;
+		}
+		> a:hover::after {
+			opacity: 1;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+
+	.fl-page-header .fl-page-nav-wrap .navbar-nav > li {
+		> a::after {
+			left: 50%;
+			@include transform(translateX(-50%));
+		}
+		> a:hover::after,
+		> a:focus::after {
+			opacity: 1;
+			width: 80%;
+		}
+		&.current-menu-item {
+			> a::after {
+				opacity: 0;
+				width: 80%;
+			}
+			> a:hover::after {
+				opacity: 1;
+			}
+		}
+	}
+
+	
+
+}

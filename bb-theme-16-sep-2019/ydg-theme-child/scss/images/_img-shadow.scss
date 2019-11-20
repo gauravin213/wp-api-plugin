@@ -1,0 +1,31 @@
+/* Image Style Shadow */
+
+.fl-photo {
+	.fl-photo-content {
+		img {
+			background: white;
+			border: 1px solid #ccc;
+			box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.7);
+			padding: 3px;
+		}
+	}
+}
+.fl-post {
+	.fl-post-thumb img {
+		background: white;
+		border: 1px solid #ccc;
+		box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.7);
+		padding: 3px;
+	}
+}
+.woocommerce, .woocommerce-page {
+	ul.products li.product a img, div.product div.images img {
+		background: white;
+		border: 1px solid #ccc;
+		box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.7);
+		padding: 3px;
+	}
+	ul.products li.product a:hover img {
+		box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.7);
+	}
+}

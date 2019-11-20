@@ -1,0 +1,74 @@
+/**
+ * Modules
+ */
+
+// Accordian Module
+.fl-accordion-item {
+	background: white;
+}
+.fl-accordion-button-label {
+	font-weight:bold;
+}
+
+// Testimonials Module
+.fl-module-testimonials {
+	width: 70%;
+	font-size: 18px;
+	margin: 0px auto;
+	font-style: italic;
+	text-align: center;
+}
+
+.bx-wrapper {
+	.bx-pager {
+		color: $pri-color;
+		font-family: Arial;
+		font-size: 0.85em;
+		font-weight: bold;
+		padding-top: 10px;
+		text-align: center;
+	}
+	.bx-pager, .bx-controls-auto {
+		position: absolute;
+		//bottom: -55px;
+		width: 100%;
+	}
+}
+
+// fix testimonial auto height & vertically align all of the slides
+.testimonial-fixed-height .fl-testimonials {
+	@include flexbox;
+	@include flex-flow(row nowrap);
+	@include align-items(stretch);
+
+	.fl-testimonial {
+		@include flexbox;
+		@include flex-flow(column nowrap);
+		@include justify-content(center);
+	}
+}
+
+// Endorser Name
+.endorser-name {
+	font-size: .8em;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 1.5em;
+}
+
+// Callout
+.fl-callout-left, .fl-callout-right {
+	h1.fl-callout-title, h2.fl-callout-title, h3.fl-callout-title, h4.fl-callout-title, h5.fl-callout-title, h6.fl-callout-title{
+    margin: 0;
+    padding: 0 0 0px 0;
+	}
+}
+.callout-30-70 {
+	.fl-callout-photo-left .fl-callout-photo, .fl-callout-photo-left-text .fl-callout-photo {
+	    padding-right: 30px;
+	    width: 30%;
+	}
+	.fl-callout-photo-left .fl-callout-content, .fl-callout-photo-left-text .fl-callout-text-wrap {
+	    width: 70%;
+	}
+}

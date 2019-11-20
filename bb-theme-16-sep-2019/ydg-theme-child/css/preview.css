@@ -1,0 +1,72 @@
+/* CSS for Customizer Preview */
+
+/* buttons */
+.flat-btn a.fl-button, .flat-btn a.fl-button:visited, .fl-builder-content .flat-btn a.fl-button, .fl-builder-content .flat-btn a.fl-button:visited,
+.gform_wrapper.flat-btn button, .gform_wrapper.flat-btn input[type="button"], .gform_wrapper.flat-btn input[type="submit"],
+.woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page #content input.button.alt,
+.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button
+{
+	background: #e5e5e5;
+	border: 0 !important;
+	color: #212121;
+}
+
+.flat-btn a.fl-button *, .flat-btn a.fl-button:visited *, .fl-builder-content .flat-btn a.fl-button *, .fl-builder-content .flat-btn a.fl-button:visited * {
+	color: #212121;
+}
+
+.border-btn a.fl-button, .border-btn a.fl-button:visited, .fl-builder-content .border-btn a.fl-button, .fl-builder-content .border-btn a.fl-button:visited,
+.gform_wrapper.border-btn button, .gform_wrapper.border-btn input[type="button"], .gform_wrapper.border-btn input[type="submit"],
+.woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page #content input.button.alt,
+.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button
+{
+	background: transparent !important;
+	border: 3px solid #aaaaaa !important;
+	border-radius: 0 !important;
+	color: #aaaaaa;
+}
+.border-btn a.fl-button *, .border-btn a.fl-button:visited *, .fl-builder-content .border-btn a.fl-button *, .fl-builder-content .border-btn a.fl-button:visited * {
+	color: #aaaaaa;
+}
+
+.gradient-btn a.fl-button, .gradient-btn a.fl-button:visited, .fl-builder-content .gradient-btn a.fl-button, .fl-builder-content .gradient-btn a.fl-button:visited,
+.gform_wrapper.gradient-btn button, .gform_wrapper.gradient-btn input[type="button"], .gform_wrapper.gradient-btn input[type="submit"],
+.woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page #content input.button.alt,
+.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button
+{
+	background: linear-gradient(to bottom, #e5e5e5 0%, #ccc 100%) !important;
+	border: 1px solid rgba(0,0,0,0.1) !important;
+	color: #212121 !important;
+}
+
+.gradient-btn a.fl-button *, .gradient-btn a.fl-button:visited *, .fl-builder-content .gradient-btn a.fl-button *, .fl-builder-content .gradient-btn a.fl-button:visited * {
+	color: #212121 !important;
+}
+
+/* images */
+.fl-photo.none-img .fl-photo-content img, .woocommerce.none-img img {
+	background: none !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	padding: 0 !important;
+}
+.fl-photo.padded-border-img .fl-photo-content img, .woocommerce.padded-border-img img {
+	background: white !important;
+	border: 1px solid #ccc !important;
+	box-shadow: none !important;
+	padding: 3px !important;
+}
+
+.fl-photo.shadow-img .fl-photo-content img, .woocommerce.shadow-img img {
+	background: white !important;
+	border: 1px solid #ccc !important;
+	box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.7) !important;
+	padding: 3px !important;
+}
+.fl-photo.bottom-border-img .fl-photo-content img, .woocommerce.bottom-border-img img {
+	background: none !important;
+	border: 0 !important;
+	border-bottom: 5px solid #ccc !important;
+	box-shadow: none !important;
+	padding: 0 !important;
+}

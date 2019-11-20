@@ -1,0 +1,78 @@
+/* Button Animation Sweep */
+
+@mixin btn-sweep($style) {
+	@if $style == flat {
+		background: $accent-color;
+		* {
+			color: set-text-color($accent-color);
+		}
+		&:hover {
+			background: $accent-color;
+			border: 0;
+			* {
+				color: set-text-color($hover-color);
+			}
+		}
+		&::before {
+			background: $hover-color;
+		}
+	}
+	@else if $style == border {
+		&:hover {
+			background: transparent;
+			* {
+				color: set-text-color($hover-color);
+			}
+		}
+		&::before {
+			background: $hover-color;
+		}
+	}
+}
+
+a.fl-button, a.fl-button:visited, .fl-builder-content a.fl-button, .fl-builder-content a.fl-button:visited,
+.woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt,
+.woocommerce a.button, .woocommerce button.button,  .woocommerce-page a.button, .woocommerce-page button.button
+{
+	@include btn-sweep($btn-style);
+	backface-visibility: hidden;
+	position: relative;
+	overflow: hidden;
+	transition: all ease-out 0.3s;
+	z-index: 2;
+
+	* {
+		transition: all ease 0.2s;
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		transition: all ease-out 0.3s;
+		@include transform( scaleX(0) );
+		transform-origin: 0 50%;
+	}
+}
+
+a.fl-button:hover::before, .fl-builder-content a.fl-button:hover::before,
+.woocommerce a.button.alt:hover::before, .woocommerce button.button.alt:hover::before, .woocommerce-page a.button.alt:hover::before, .woocommerce-page button.button.alt:hover::before,
+.woocommerce a.button:hover::before, .woocommerce button.button:hover::before, .woocommerce-page a.button:hover::before, .woocommerce-page button.button:hover::before,
+{
+	@include transform( none );
+}
+
+/* Need animation for inputs
+ *
+.gform_wrapper button, .gform_wrapper input[type="button"], .gform_wrapper input[type="submit"],
+.woocommerce input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page #content input.button.alt,
+.woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button
+{
+
+}
+*/

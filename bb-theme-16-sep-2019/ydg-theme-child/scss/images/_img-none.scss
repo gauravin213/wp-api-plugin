@@ -1,0 +1,30 @@
+/* Image Style None Class */
+
+.img-none {
+	.fl-photo {
+		.fl-photo-content {
+			img {
+				background: none;
+				border: 0;
+				box-shadow: none;
+				padding: 0;
+			}
+		}
+	}
+	.fl-post {
+		.fl-post-thumb img {
+			background: none;
+			border: 0;
+			box-shadow: none;
+			padding: 0;
+		}
+	}
+	.woocommerce {
+		ul.products li.product a img, div.product div.images img {
+			background: none;
+			border: 0;
+			box-shadow: none;
+			padding: 0;
+		}
+	}
+}

@@ -1,0 +1,127 @@
+/**
+ * WooCommerce
+ *
+**/
+
+.woocommerce, .woocommerce-page {
+  .fl-module-rich-text ul li::before, .fl-module-callout ul li::before {
+    content: '';
+  }
+	// products
+	ul.products {
+		list-style: none;
+		padding: 0;
+		margin-top: 0;
+
+		li.product {
+			margin-bottom: $woo-spacing;
+			text-indent: 0;
+
+			a img {
+				margin: 0 0 5px;
+			}
+			.onsale, span.onsale {
+				background: $accent-color;
+			}
+			h3 {
+				font-size: $woo-header;
+				margin: 0;
+				padding: 5px 0 0;
+				line-height: 1.3em;
+			}
+			.star-rating {
+				font-size: $woo-stars;
+			}
+			.price {
+				font-size: $woo-price;
+				font-weight: 400;
+				line-height: 1.6em;
+				margin: 1px 0 0;
+				padding: 0;
+			}
+			.button {
+				display: none;
+				margin: 10px 0 0;
+				line-height: 1;
+			}
+			&::before {
+				content: none;
+				margin: 0;
+			}
+		}
+	}
+
+	/* single products */
+	&.single-product {
+
+		ul.products {
+			padding-top: 0;
+		}
+
+	}
+	.onsale, span.onsale {
+		background: $accent-color;
+		color: set-text-color($accent-color);
+	}
+
+	/* fix add to cart button background flash on click */
+	#respond input#submit.alt.disabled, #respond input#submit.alt.disabled:hover, #respond input#submit.alt:disabled, #respond input#submit.alt:disabled:hover, #respond input#submit.alt:disabled[disabled], #respond input#submit.alt:disabled[disabled]:hover, a.button.alt.disabled, a.button.alt.disabled:hover, a.button.alt:disabled, a.button.alt:disabled:hover, a.button.alt:disabled[disabled], a.button.alt:disabled[disabled]:hover, button.button.alt.disabled, button.button.alt.disabled:hover, button.button.alt:disabled, button.button.alt:disabled:hover, button.button.alt:disabled[disabled], button.button.alt:disabled[disabled]:hover, input.button.alt.disabled, input.button.alt.disabled:hover, input.button.alt:disabled, input.button.alt:disabled:hover, input.button.alt:disabled[disabled], input.button.alt:disabled[disabled]:hover {
+		background: $hover-color;
+	}
+
+	/* cart */
+	label.radio, label.checkbox {
+		display: inline;
+		padding-left: 0;
+	}
+	table.shop_table td.product-quantity {
+		text-align: center;
+	}
+}
+
+/********* tab removal fix ********/
+.woo-product-description, .upsells {
+	clear: both;
+}
+
+// Sidebar
+.fl-col-small {
+	.widget_product_search {
+		.button, input[type=button], input[type=submit] {
+		    width: 100%;
+		    margin-top: 10px;
+		}
+	}
+	.widget_product_categories {
+		.widgettitle {
+			background: $sec-color;
+			padding: 10px 15px;
+			border-bottom: 1px solid #e5e5e5;
+		}
+		.product-categories {
+			padding: 10px 15px;
+		}
+	    border: 1px solid #e5e5e5;
+	}
+}
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    padding-right: 20px;
+}
+
+// headings
+.woocommerce-products-header h1 {
+    font-size: 26px !important;
+}
+.woocommerce ul.products, .woocommerce-page ul.products {
+    padding-top: 20px;
+}
+
+h1.product_title, h1.entry-title {
+    font-size: 32px !important;
+}
+.related h2 {
+      //font-size: 28px !important;
+}
+.woocommerce-Tabs-panel h2 {
+  font-size: 20px !important;
+}

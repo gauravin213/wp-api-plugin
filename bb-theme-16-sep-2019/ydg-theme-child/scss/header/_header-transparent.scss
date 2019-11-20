@@ -1,0 +1,46 @@
+/* Home Header Transparent */
+
+@media (min-width: 992px) {
+    .page:not(.fl-fixed-header) {
+        &:not(.fl-shrink) {
+            .fl-page-header-primary {
+                background: none;
+                border: none;
+                position: absolute;
+                top: auto;
+                left: 0;
+                right: 0;
+                width: 100%;
+                z-index: 100;
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.15+0,0+100 */
+                background: -moz-linear-gradient(top,  rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+                .fl-page-header-wrap {
+                    border: 0;
+                }
+            }
+        }
+
+        &.fl-shrink {
+            .fl-page-header-primary {
+                transition: all 0.4s ease-in-out;
+                &:not(.fl-shrink-header) {
+                    background: none;
+                    border: none;
+                    position: absolute;
+                    top: auto;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    z-index: 100;
+                }
+            }
+            .fl-page {
+                padding-top: 0 !important;
+            }
+        }
+    }
+}

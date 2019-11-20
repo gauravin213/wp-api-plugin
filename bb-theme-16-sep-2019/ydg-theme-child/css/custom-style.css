@@ -1,0 +1,13 @@
+/*
+* custom style
+*/
+
+/*Top bar menu*/
+#menu-top-bar{
+display: flex;
+width: 100%;
+
+}
+.menu-right-side{
+	margin-left: auto !important;
+}

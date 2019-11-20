@@ -1,0 +1,257 @@
+/**
+ * Forms
+ */
+
+input[type=text], input[type=password], input[type=email], input[type=tel], input[type=date], input[type=month], input[type=week], input[type=time], input[type=number], input[type=search], input[type=url], select, textarea {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px 10px !important;
+	color: $body-color !important;
+	padding: 6px 12px;
+
+	&:focus {
+		border-color: #aaa;
+	}
+
+	.hero &, .alt-row &, .alt-col &, .row-col-bg & {
+		border: 0;
+	}
+}
+
+input[type=url], select {
+    background-color: #fcfcfc;
+    box-shadow: none;
+    height: 34px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    padding: 6px 12px;
+    transition: all ease-in-out .15s;
+    vertical-align: middle;
+    width: 100%;
+    -webkit-appearance:none;
+}
+
+::-webkit-input-placeholder {color: lighten($body-color, 10%) !important;}
+:-moz-placeholder {color: lighten($body-color, 10%) !important;}
+::-moz-placeholder {color: lighten($body-color, 10%) !important;}
+:-ms-input-placeholder {color: lighten($body-color, 10%) !important;}
+
+// Gravity forms
+$col-spacing: 5px;
+
+div.gform_wrapper {
+	.fl-builder-content & {
+		// max-width: none;
+		// margin: 0;
+	}
+
+    .gform_body {
+		width: auto;
+	}
+    ul.gform_fields {
+        margin-left: -$col-spacing !important;
+        margin-right: -$col-spacing !important;
+
+        li.gfield {
+            clear: both;
+            padding-left: $col-spacing;
+            padding-right: $col-spacing;
+            margin-top: 0;
+			margin-bottom: $col-spacing * 2;
+
+            &::before, &::after {
+                content: '';
+                display: table;
+            }
+            &::after {
+                clear: both;
+            }
+
+			div.ginput_container {
+				margin: 0;
+			}
+        }
+
+
+        @media (min-width: 768px) {
+
+            // Halfs
+            li.gf_left_half, li.gf_right_half {
+                clear: none;
+                float: left;
+                padding-right: $col-spacing !important;
+                width: 50%;
+            }
+
+            // Thirds
+            li.gf_left_third, li.gf_middle_third, li.gf_right_third {
+                clear: none;
+                float: left;
+                padding-right: $col-spacing;
+                width: 33.333333%;
+            }
+
+            // Names
+            li.gfield .ginput_container_name {
+                @include flexbox;
+                @include flex-flow(row nowrap);
+                margin-left: -$col-spacing;
+                margin-right: -$col-spacing;
+
+                span {
+                    @include flex(1, 1, auto);
+                    min-width: 1px;
+                    padding-left: $col-spacing;
+                    padding-right: $col-spacing;
+
+                    &.name_prefix, &.name_suffix {
+                        @include flex(0, 1, 100px);
+                    }
+                }
+            }
+
+            // Time
+            li.gfield .ginput_container_time {
+                // float: left;
+            }
+
+            // Address
+            li.gfield .ginput_container_address {
+                margin-left: -$col-spacing;
+                margin-right: -$col-spacing;
+                width: auto;
+
+                span {
+                    display: inline-block;
+                    padding-left: $col-spacing;
+                    padding-right: $col-spacing;
+                }
+                .ginput_full {
+                    width: 100%;
+                }
+                .ginput_left, .ginput_right {
+                    margin-right: 0 !important;
+                    width: 50%;
+                }
+            }
+        }
+
+        &::before, &::after {
+            content: '';
+            display: table;
+        }
+        &::after {
+            clear: both;
+        }
+    }
+
+	// footer
+	.gform_footer {
+		margin: 0;
+		padding: 0;
+		text-align: left;
+
+		input.button, button, input[type="submit"] {
+			height: 34px; // make buttons same height as form fields
+			margin: 0;
+			padding-left: 30px;
+			padding-right: 30px;
+
+			.width75 &, .btn-full & {
+			    width: 100%;
+			}
+		}
+	}
+}
+
+/* inline form styles */
+.inline_form_wrapper.gform_wrapper {
+	// margin: 0;
+	// max-width: 100%;
+
+	form {}
+	.gform_body {}
+	ul.gform_fields {
+		li.gfield {
+			// clear: none !important;
+			// margin: 0 0 10px;
+		}
+	}
+
+	.top_label .gfield_label, .ginput_complex label, .gfield_time_hour label, .gfield_time_minute label, .gfield_time_ampm label, .gfield_date_month label, .gfield_date_day label, .gfield_date_year label, .instruction {
+		@include sr-only;
+	}
+
+	.gform_footer {
+		padding: 0;
+		margin: 10px 0 0;
+
+        button, input[type="button"], input[type="submit"] {
+    		height: 34px;
+    		padding: 0 30px;
+    	}
+	}
+
+	body & label.gfield_label + div.ginput_container {
+		margin-top: 0;
+	}
+}
+
+/* hide labels */
+.hide_labels_wrapper.gform_wrapper {
+
+    .top_label {
+
+    	.gfield_label {
+			@include sr-only;
+		}
+	}
+
+	.gform_footer {
+		margin: 0;
+	}
+}
+
+// @import "datepicker";
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    .inline_form_wrapper.gform_wrapper {
+		form {
+			@include flexbox;
+			@include flex-direction(row);
+			@include flex-wrap(nowrap);
+			// @include align-items(center);
+		}
+		.validation_error {
+			display: none;
+		}
+
+		.gform_body {
+			@include flex(1, 1, auto);
+			min-width: 1px;
+			padding-right: $col-spacing;
+
+            ul.gform_fields {
+    			@include flexbox;
+    			@include flex-direction(row);
+    			@include flex-wrap(nowrap);
+    			@include align-items(center);
+    			// margin: 0 -5px !important;
+
+    			li.gfield {
+    				@include flex(1, 1, auto);
+    				min-width: 1px;
+    				margin: 0;
+    				// padding: 0 5px;
+    			}
+    		}
+		}
+
+		.gform_footer {
+			margin: 0;
+			clear: none;
+		}
+	}
+}

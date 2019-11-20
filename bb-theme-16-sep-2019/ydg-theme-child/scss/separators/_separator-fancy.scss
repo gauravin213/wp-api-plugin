@@ -1,0 +1,43 @@
+/* Separator Style Fancy Shadow */
+
+.fl-separator {
+	border: none !important;
+	clear: both;
+	height: 1px;
+	margin: 0 auto;
+	position: relative;
+	text-align: left;
+	width:100%;
+
+	&::before, &::after {
+		background-color: transparent;
+		border: 0;
+		border-radius: 100%;
+		content: '';
+		height: 13px;
+		position: absolute;
+		width: 100%;
+	}
+	&::before {
+		background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+		top: -0.5em;
+		height: 1em;
+		left: auto;
+		bottom: auto;
+	}
+	&::after {
+		background: white;
+		height: 0.5em;
+		top: 1px;
+		bottom: auto;
+		right: auto;
+	}
+
+	// fix background colors on alt rows
+	.alt-row &::after, .alt-col &::after {
+		background: $pri-color;
+	}
+	.alt-row2 &::after, .alt-col2 &::after {
+		background: $sec-color;
+	}
+}

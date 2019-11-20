@@ -1,0 +1,249 @@
+/**
+ * General Layouts
+ */
+
+// Rows
+$row-spacing: 20px !default;
+.fl-row-content-wrap {
+	padding-top: $row-spacing;
+	padding-bottom: $row-spacing;
+}
+
+$module-spacing: 20px !default;
+.fl-module-content {
+	margin-top: $module-spacing;
+	margin-bottom: $module-spacing;
+}
+
+// Alt Rows
+.alt-row {
+	background: $pri-color;
+	color: set-text-color($pri-color);
+
+	*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(input):not(select):not(textarea) {
+		color: inherit;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: set-heading-color($pri-color);
+		* {
+			color: inherit;
+		}
+	}
+}
+
+// Alt Row 2
+.alt-row2 {
+	background: $sec-color;
+	color: set-text-color($sec-color);
+
+	*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(input):not(select):not(textarea) {
+		color: inherit;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: set-heading-color($sec-color);
+		* {
+			color: inherit;
+		}
+	}
+}
+
+// Page headings
+.page-heading {
+	background-color: $sec-color;
+	border-bottom: 1px solid darken($sec-color, 5%);
+		&.globalHeight {
+		.fl-row-content-wrap {
+		min-height: 1vh;
+		padding: 30px 15px;
+		}
+	}
+
+	h1 {
+		font-size: 2.2em;
+	}
+}
+
+.ph-1 {
+	.fl-row-content-wrap {
+		padding-top: 30px !important;
+		padding-bottom: 30px !important;
+	}
+}
+
+// Alt cols
+.alt-col {
+	.fl-col-content {
+		background: $pri-color;
+		color: set-text-color($pri-color);
+		margin: 20px;
+		padding: 15px 0;
+	}
+	*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(input):not(select):not(textarea) {
+		color: set-text-color($pri-color);
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: set-heading-color($pri-color);
+		* {
+			color: inherit;
+		}
+	}
+}
+
+
+// Alt col2
+.alt-col2 {
+	.fl-col-content {
+		background: $sec-color;
+		color: set-text-color($sec-color);
+		margin: 20px;
+		padding: 15px 0;
+	}
+	*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(input):not(select):not(textarea) {
+		color: set-text-color($sec-color);
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: set-heading-color($sec-color);
+		* {
+			color: inherit;
+		}
+	}
+}
+
+
+// Row Column Backgrounds
+.row-col-bg, .row-col-bg2 {
+    .fl-col {
+        .fl-col-content {
+            margin: 10px;
+            padding: 15px 0;
+        }
+        &.empty .fl-col-content {
+            background: none;
+			margin: 0;
+        }
+    }
+}
+
+.row-col-bg {
+    background: $pri-color;
+
+    .fl-col-content {
+        background: white;
+    }
+
+    *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(input):not(select):not(textarea) {
+        color: $body-color;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: $heading-color;
+        * {
+            color: inherit;
+        }
+    }
+
+    .empty .fl-col-content {
+        * {
+            color: set-text-color($pri-color);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: set-heading-color($pri-color);
+            * {
+                color: inherit;
+            }
+        }
+    }
+    &.alt-row, &.alt-row2 {
+        * {
+            color: $body-color;
+        }
+    }
+}
+
+.row-col-bg2 {
+    background: white;
+    .fl-col-content {
+        background: $sec-color;
+    }
+    *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(input):not(select):not(textarea) {
+        color: set-text-color($sec-color);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: set-heading-color($sec-color);
+        * {
+            color: inherit;
+        }
+    }
+}
+
+// Small devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+    // Content 75%
+	.width75 {
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	// Content 50%
+	.width50 {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	// Full Height Row
+	.fl-row-full-height .fl-row-content-wrap {
+    	min-height: calc(100vh - 135px);
+	}
+
+	// Page Heading Height
+	.page-heading {
+		&.globalHeight {
+		.fl-row-content-wrap {
+    min-height: 33vh;
+		padding: 10px 15px;
+		}
+	}
+	}
+
+	// Flexbox Columns
+	// use flex-col on rows to equalize columns
+	.flex-col {
+		.fl-col-group {
+			@include flexbox;
+			@include flex-direction(row);
+			@include flex-wrap(nowrap);
+		}
+		.fl-col {
+			@include flexbox;
+			@include flex-direction(row);
+			@include flex-wrap(nowrap);
+			min-width: 1px;
+
+			.fl-col-content {
+				@include flex(1, 1, 100%);
+				min-width: 1px;
+			}
+		}
+	}
+
+	// Reverse Columns
+	// reverses order of columns on desktop
+	.reverse-col {
+		.fl-col {
+			float: right;
+		}
+	}
+}
+
+// Medium devices (tablets, 992px and up)
+@media (min-width: 992px) {
+
+	// parallax rows fix zoom
+	.fl-row-bg-parallax {
+		.fl-row-content-wrap {
+			background-size: auto auto;
+		}
+	}
+
+}

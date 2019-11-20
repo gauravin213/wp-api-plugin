@@ -1,0 +1,130 @@
+<?php
+/*
+* Custom Get Category By Slug
+*/
+function custom_countdown_timer_shortcode_function($atts){
+
+     extract( shortcode_atts(
+        array(
+            'id' => '',
+            'date' => '',
+            'title'  => '',
+            ), $atts )
+    );
+    ob_start();
+
+?>
+<div class="clock" style="margin:2em;"></div>
+<div class="message"></div>
+<script type="text/javascript">
+/*	var clock;
+	
+	jQuery(document).ready(function() {
+	    
+	    var countDownDate = new Date("june 29, 2019 10:30:00").getTime();
+
+		// Get today's date and time
+		var now = new Date().getTime();
+		    
+		// Find the distance between now and the count down date
+		var distance = countDownDate / 1000 - now / 1000;
+
+		var time = distance;
+		
+		var clock;
+		
+		jQuery(document).ready(function() {
+			var clock;
+
+			clock = jQuery('.clock').FlipClock({
+		        clockFace: 'DailyCounter',
+		        //showSeconds: false,
+		        showDay: false,
+		        autoStart: false,
+		        callbacks: {
+		        	stop: function() {
+		        		jQuery('.message').html('The clock has stopped!')
+		        	}
+		        }
+		    });  
+		    clock.setTime(time); //220880
+		    clock.setCountdown(true);
+		    clock.start();
+
+		});
+		
+		
+
+	});*/
+	
+	
+	/*var clock;
+		
+	jQuery(document).ready(function() {
+	    
+	    var countDownDate = new Date("june 29, 2019 10:30:00").getTime();
+
+		// Get today's date and time
+		var now = new Date().getTime();
+		    
+		// Find the distance between now and the count down date
+		var distance = countDownDate / 1000 - now / 1000;
+
+		var time = distance;
+		
+		clock = jQuery('.clock').FlipClock(time, {
+	        clockFace: 'HourlyCounter'
+	    });
+	});*/
+	
+	
+	jQuery(document).ready(function() {
+
+		var countDownDate = new Date("november 25, 2019 10:30:00").getTime();
+
+		// Get today's date and time
+		var now = new Date().getTime();
+		
+		var time = 0;
+		var distance = 0;
+		
+		if (countDownDate < now) { 
+			
+			time = 0;
+
+		}else{ 
+            // Find the distance between now and the count down date
+    		distance = countDownDate / 1000 - now / 1000;
+    		time = distance;
+		}
+			
+		    
+	
+
+
+		var clock;
+
+		clock = jQuery('.clock').FlipClock({
+	        clockFace: 'HourlyCounter',
+	        autoStart: false,
+	        callbacks: {
+	        	stop: function() {
+	        		jQuery('.message').html('The clock has stopped!')
+	        	}
+	        }
+	    });
+			    
+	    clock.setTime(time); //220880
+	    clock.setCountdown(true);
+	    clock.start();
+
+	});
+	
+		
+</script>
+<?php
+return ob_get_clean();
+}
+add_shortcode('custom_countdown_timer_shortcode', 'custom_countdown_timer_shortcode_function');
+
+?>

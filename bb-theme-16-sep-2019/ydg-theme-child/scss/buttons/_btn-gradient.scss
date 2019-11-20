@@ -1,0 +1,41 @@
+/* Gradient Button */
+
+a.fl-button, a.fl-button:visited, .fl-builder-content a.fl-button, .fl-builder-content a.fl-button:visited,
+.fl-builder-content .fl-module-content-slider .fl-content-slider .fl-slide a.fl-button,
+.gform_wrapper button, .gform_wrapper input[type="button"], .gform_wrapper input[type="submit"],
+.woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page #content input.button.alt,
+.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button
+ {
+	background-color: $accent-color;
+	background-image: linear-gradient(to bottom, $accent-color 0%, darken($accent-color, 20%) 100%);
+	border: 1px solid rgba(0,0,0,0.1);
+	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3);
+	color: set-text-color($accent-color);
+}
+a.fl-button *, a.fl-button:visited *, .fl-builder-content a.fl-button *, .fl-builder-content a.fl-button:visited * {
+	color: set-text-color($accent-color);
+}
+
+a.fl-button, a.fl-button:visited, .fl-builder-content a.fl-button, .fl-builder-content a.fl-button:visited,
+.fl-builder-content .fl-module-content-slider .fl-content-slider .fl-slide a.fl-button,
+{
+ margin-top: 10px;
+}
+
+.fl-subscribe-form {
+a.fl-button {
+ margin-top: 0px !important;
+ }
+}
+
+a.fl-button, a.fl-button:visited, .fl-builder-content a.fl-button, .fl-builder-content a.fl-button:visited,
+.fl-builder-content .fl-module-content-slider .fl-content-slider .fl-slide a.fl-button,
+{
+ margin-top: 10px;
+}
+
+.fl-subscribe-form {
+a.fl-button {
+ margin-top: 0px !important;
+ }
+}

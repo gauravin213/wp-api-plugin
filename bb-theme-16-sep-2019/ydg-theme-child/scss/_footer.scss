@@ -1,0 +1,45 @@
+/**
+ * Footer
+**/
+
+// Footer Widgets
+.fl-page-footer-widgets {
+	border: 0;
+	line-height:1.2;
+
+	.fl-widget-title {
+		font-size: 20px;
+	}
+}
+
+
+// Footer
+.fl-page-footer {
+	border-top: 0;
+}
+.fl-page-footer-wrap {
+	input[type=text], input[type=password], input[type=email], input[type=tel], input[type=date], input[type=month], input[type=week], input[type=time], input[type=number], input[type=search], textarea {
+		border: 0px !important;
+	}
+	.container {
+    //border-top: 1px solid rgba(255, 255, 255, .06);
+	}
+}
+
+// Small devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+    // Make the footer widgets flexible
+    .fl-page-footer-widgets-row {
+		@include flexbox;
+		@include flex-direction(row);
+		@include flex-wrap(nowrap);
+
+		> div {
+			@include flex(1, 1, auto);
+			float: none;
+			width: auto;
+		}
+	}
+
+}

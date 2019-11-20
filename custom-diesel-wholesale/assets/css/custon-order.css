@@ -1,0 +1,125 @@
+/*
+* custon-order.css
+*/
+
+#TB_window #TB_ajaxContent {
+    height: auto;
+}
+.ds_model legend {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px 0 0 0;
+}
+.ds_model table tr td select {
+    height: auto;
+}
+.ds_model .form-table td, .ds_model .form-table th, .ds_model .label-responsive {
+    display: block;
+    width: auto;
+    vertical-align: middle;
+}
+ .ds_model .form-table td select{margin-bottom:10px;}
+.ds_model .form-table td {
+    padding: 0px 0px !important;
+}
+.ds_model .form-table th {
+    padding-top: 10px;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.ds_model .form-table td input, .ds_model .form-table td select{
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 7px 10px;
+    display: block;
+    max-width: none;
+    box-sizing: border-box;
+}
+.ds_model .form-table td input[type="radio"] {
+    width: auto;
+    display: inline-block;
+}
+
+
+#CUSTOM_ORDER_DETAILS {
+    width: 50ch;
+}
+
+
+.custom-wpc-active {
+    border: 1px solid;
+    padding: 15px !important;
+    /*background-color: #6ea96e;*/
+    /*color: #fff;*/
+}
+
+
+.custom-wpc-loader{
+    position: relative;
+}
+.custom-wpc-loader:before{
+    content:'';
+    background: rgba(255,522,522, .89);
+    position: absolute;
+    left: 0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+.custom-wpc-loader:after{
+    content:'';
+    background: url('../img/spinner-2x.gif') no-repeat center center;
+    position: absolute;
+    left: 0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+.paypal_invoice_info {
+    background-color: #ddeadd;
+    padding: 7px;
+    border-radius: 5px;
+}
+.invoice_status {
+    background-color: green;
+    padding: 5px;
+    border-radius: 3px;
+    color: #ffff;
+    font-weight: bold;
+}
+
+
+.invoice_status_paid{
+     background-color: #327b32;
+    padding: 5px;
+    border-radius: 3px;
+    color: #ffff;
+    font-weight: bold;
+}
+
+.invoice_status_other{
+     background-color: #979797;
+    padding: 5px;
+    border-radius: 3px;
+    color: #ffff;
+    font-weight: bold;
+}
+
+
+.admin-pm-option{
+    position: relative;
+    top: 3px
+}
+
+.paypal-api-reponce-error_style{
+    color: rgb(255, 0, 0);background: #c0c0c0;display: block;padding: 2px;margin: 2px;
+}
+
+#paypal_invoice_aj_action {
+    margin-top: 4px;
+}

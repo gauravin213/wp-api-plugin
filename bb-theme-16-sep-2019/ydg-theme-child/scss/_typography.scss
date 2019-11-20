@@ -1,0 +1,127 @@
+/**
+ * Typography
+ */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400i';
+
+// Base body text
+body {}
+
+// Headings
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	margin-top: 0;
+	.emphasis {
+		font-weight: bold;
+	}
+}
+
+h1, .h1 {}
+h2, .h2 {}
+h3, .h3 {}
+h4, .h4 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	text-transform: none;
+	font-style: italic;
+}
+h5, .h5 {}
+h6, .h6 {}
+
+.lineHead {
+	.fl-heading {
+		position: relative;
+		&::after {
+			content: '';
+			width: 100%;
+			height: 1px;
+			background-color: transparentize($body-color, 40%);
+			position: absolute;
+			top: 50%;
+			left: 0;
+		}
+		.fl-heading-text {
+			position: relative;
+			z-index: 1;
+			padding: 0.2em 0.5em;
+			background-color: #fff;
+		}
+	}
+	&.left {
+		.fl-heading {
+			.fl-heading-text {
+				padding: 0.2em 0.5em 0.2em 0;
+			}
+		}
+	}
+}
+
+.alt-row, .row-col-bg {
+	.lineHead {
+		.fl-heading {
+			position: relative;
+			&::after {
+				content: '';
+				width: 100%;
+				height: 1px;
+				background-color: transparentize(#fff, 40%);
+				position: absolute;
+				top: 50%;
+				left: 0;
+			}
+		}
+	}
+}
+
+//  paragraphs
+p {
+    &:last-child {
+    	margin-bottom: 0;
+    }
+}
+.pipe {
+	opacity: .3;
+  padding: 0 8px;
+}
+
+// Lists
+.fl-module-rich-text, .fl-module-callout {
+	ul {
+		list-style: none;
+		padding: 0;
+		li {
+			margin-bottom: 5px;
+			padding-left: 1.5em;
+			position: relative;
+			&::before {
+        color: #FF1E1E;
+				content: '\f046';
+				font-family: FontAwesome;
+				position: absolute;
+				top: 3px;
+				left: 0;
+			}
+		}
+	}
+}
+
+// Responsive Media Queries
+// Mobile devices (phones, 767px and down)
+@media (max-width: 768px) {
+	.center-mobile * {
+		text-align: center !important;
+	}
+}
+
+// Small devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Medium devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}

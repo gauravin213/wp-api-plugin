@@ -1,0 +1,16 @@
+/* Separator Style Narrow */
+
+.fl-separator {
+	background-color: $pri-color;
+	border:none !important;
+	height:1px;
+	width: 75px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.alt-row, .alt-col {
+	.fl-separator {
+		background-color: white;
+	}
+}

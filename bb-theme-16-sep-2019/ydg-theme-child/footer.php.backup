@@ -1,0 +1,177 @@
+<?php echo get_search_form();?>
+
+<?php do_action( 'fl_content_close' ); ?>
+
+    </div><!-- .fl-page-content -->
+    <?php
+
+    do_action( 'fl_after_content' );
+
+    if ( FLTheme::has_footer() ) :
+
+    ?>
+    <footer class="fl-page-footer-wrap" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
+        <?php
+
+        do_action( 'fl_footer_wrap_open' );
+        do_action( 'fl_before_footer_widgets' );
+
+        FLTheme::footer_widgets();
+
+        do_action( 'fl_after_footer_widgets' );
+        do_action( 'fl_before_footer' );
+
+        FLTheme::footer();
+
+        do_action( 'fl_after_footer' );
+        do_action( 'fl_footer_wrap_close' );
+
+        ?>
+    </footer>
+    <?php endif; ?>
+    <?php do_action( 'fl_page_close' ); ?>
+</div><!-- .fl-page -->
+<?php
+
+wp_footer();
+
+do_action( 'fl_body_close' );
+
+FLTheme::footer_code();
+
+?>
+
+
+
+<!--custom my account link update-->
+<script type="text/javascript">
+	jQuery(document).ready(function(){ 
+	var c_url = "<?php echo home_url();?>/wp-admin/post-new.php?post_type=shop_order";
+    jQuery('.woocommerce-MyAccount-navigation-link--create-orders > a').attr('href', c_url);
+});
+</script>
+<!--custom my account link update-->
+
+
+<!--custom my account link update-->
+<script type="text/javascript">
+    jQuery(document).ready(function(){ 
+    var c_url = "<?php echo home_url();?>/wp-admin/post-new.php?post_type=shop_order";
+    jQuery('.woocommerce-MyAccount-navigation-link--create-orders > a').attr('href', c_url);
+});
+</script>
+<!--custom my account link update-->
+
+
+<!--checkout page-->
+<?php if (is_checkout()) { ?>
+<script type="text/javascript">
+    jQuery(document).ready(function(){ //alert('check');
+    
+    
+    
+        jQuery.fn.get_state_code = function(target){
+            
+            var billing_state = target.find(":selected").val();
+
+            if (billing_state == "CA") { //fire popup box
+
+                //alert(cus_state+' Open popup');
+
+                jQuery('#myModal').show();
+
+            }
+            
+            //alert("==>"+target);
+        };
+        
+        
+        //Open model on state selection
+        jQuery(document).on('change', '#billing_state', function(){
+
+            var target = jQuery(this);
+
+            /*var billing_state = target.find(":selected").val();
+
+            if (billing_state == "CA") { //fire popup box
+
+                //alert(cus_state+' Open popup');
+
+                jQuery('#myModal').show();
+
+            }*/
+            
+            jQuery(this).get_state_code(target);
+            
+            
+        });
+
+        jQuery(document).on('change', '#shipping_state', function(){
+
+            var target = jQuery(this);
+
+            /*var shipping_state = target.find(":selected").val();
+
+            if (shipping_state == "CA") { //fire popup box
+
+                //alert(cus_state+' Open popup');
+
+                jQuery('#myModal').show();
+
+            }*/
+            
+            jQuery(this).get_state_code(target);
+        });
+        
+        
+        jQuery( document ).on( 'updated_checkout', function() {
+            
+            var billing_state = jQuery('#billing_state').find(":selected").val();
+
+            if (billing_state == "CA") {
+                
+                jQuery('#myModal').show();
+
+            }
+            
+            var shipping_state = jQuery('#shipping_state').find(":selected").val();
+
+            if (shipping_state == "CA") { //fire popup box
+
+                jQuery('#myModal').show();
+
+            }
+        
+        } );
+
+    });
+</script>
+<?php } ?>
+<!--checkout page-->
+
+
+
+<script>
+jQuery(document).ready(function(){
+    jQuery('body').removeClass('loader');
+});
+</script>
+<?php if(!isset($_GET['ign_opc_pop']) && strpos($_SERVER['REQUEST_URI'], 'phone-manual-orders-do-not-delete') === false): ?>
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript" async>
+window.__lc = window.__lc || {};
+window.__lc.license = 9706795;
+(function() {
+var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+</script>
+<noscript>
+<a href="https://www.livechatinc.com/chat-with/9706795/">Chat with us</a>,
+powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener" target="_blank">LiveChat</a>
+</noscript>
+<!-- End of LiveChat code -->
+<?php endif; ?>
+</body>
+</html>

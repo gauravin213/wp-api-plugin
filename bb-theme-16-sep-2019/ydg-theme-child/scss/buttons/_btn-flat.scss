@@ -1,0 +1,44 @@
+/* Flat Button */
+
+a.fl-button, a.fl-button:visited, .fl-builder-content a.fl-button, .fl-builder-content a.fl-button:visited,
+.fl-builder-content .fl-module-content-slider .fl-content-slider .fl-slide a.fl-button,
+.gform_wrapper button, .gform_wrapper input[type="button"], .gform_wrapper input[type="submit"],
+.woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page #content input.button.alt,
+.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button
+{
+	background: $accent-color;
+	border: 0;
+	color: set-text-color($accent-color);
+  border-radius: 0px !important;
+	* {
+		color: set-text-color($accent-color);
+	}
+
+	&:hover {
+		border: 0;
+	}
+}
+
+a.fl-button, a.fl-button:visited, .fl-builder-content a.fl-button, .fl-builder-content a.fl-button:visited,
+.fl-builder-content .fl-module-content-slider .fl-content-slider .fl-slide a.fl-button,
+{
+ margin-top: 10px;
+}
+
+.fl-subscribe-form {
+a.fl-button {
+ margin-top: 0px !important;
+ }
+}
+
+a.fl-button, a.fl-button:visited, .fl-builder-content a.fl-button, .fl-builder-content a.fl-button:visited,
+.fl-builder-content .fl-module-content-slider .fl-content-slider .fl-slide a.fl-button,
+{
+ margin-top: 10px;
+}
+
+.fl-subscribe-form {
+a.fl-button {
+ margin-top: 0px !important;
+ }
+}

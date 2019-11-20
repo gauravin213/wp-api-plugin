@@ -1,0 +1,153 @@
+/**
+ * Header
+ */
+
+// Top Bar
+.fl-page-bar {
+	border: 0;
+	font-size: 1em;
+
+	i {
+		padding-right: 5px;
+	}
+
+    .fl-page-bar-nav {
+        > li {
+            > a {
+                padding: 2px 4px;
+                font-size: 1em;
+                &::after {
+                    color: rgba(255, 255, 255, 0.16);
+                    content: "|";
+                    padding-left: 15px;
+                }
+            }
+            &:last-of-type > a::after {
+                content: none;
+            }
+        }
+    }
+	.tb-phone {
+		font-weight: bold;
+		font-size: 1.1em;
+		&::before {
+			content: '\f095';
+			font-family: FontAwesome;
+			padding: 0px 5px;
+		}
+	}
+	.text-right .fl-social-icons {
+		&::before {
+			content: '|';
+			opacity: .3;
+			padding: 0 5px 0 14px;;
+		}
+	}
+}
+/*.fl-page-bar-nav {
+    > li.menu-item-3079 {
+        > a {
+            padding: 2px 4px;
+            &::after {
+                color: rgba(255, 255, 255, 0.2);
+                content: "|";
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+}*/
+
+// change social twitter icon to bird
+.fl-icon-twitter-regular:before {
+	content: '\e086';
+}
+.fl-icon-twitter-circle:before {
+	content: '\e286';
+}
+
+// all headers, fixed & primary
+.fl-page-header {
+
+    // Primary header
+    &.fl-page-header-primary {}
+
+    // Fixed header
+    &.fl-page-header-fixed {}
+
+	.fl-page-nav-wrap .navbar-nav  {
+		> li {
+			> a {
+				// use nav item spacing in customizer to adjust padding
+        letter-spacing: .1em;
+			}
+		}
+
+		// make submenus white instead of header color
+		ul.sub-menu {
+			background: white;
+			> li {
+				> a {
+					color: $heading-color;
+					&:hover {
+						color: $accent-color;
+					}
+
+					// disable nav animations on submenus
+					&::before, &::after {
+						content: '';
+						height: 0;
+					}
+				}
+			}
+		}
+	}
+
+	// disable nav animations on search icon
+	.fl-page-nav-search a.fa-search::after {
+		height: 0;
+		opacity: 0;
+	}
+}
+
+
+// Responsive Queries
+// Medium devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+    // Make the header more flexible
+	.fl-page-nav-right .fl-page-header-row {
+		@include flexbox;
+		@include flex-direction(row);
+		@include flex-wrap(nowrap);
+		@include align-items(center);
+		width: auto;
+
+		> .col-md-4, > .col-md-3 {
+			display: block;
+			@include flex(1, 0, auto);
+			min-width: 1px;
+			width: auto;
+		}
+		> .col-md-8, > .col-md-9 {
+			display: block;
+			@include flex(1, 1, auto);
+			min-width: 1px;
+			width: auto;
+		}
+	}
+
+}
+
+// Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+	.fl-full-width {
+		.fl-page-header, .fl-page-bar {
+			.container {
+				width: 1060px;
+			}
+		}
+	}
+
+}

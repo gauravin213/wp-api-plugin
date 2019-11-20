@@ -1,0 +1,115 @@
+/* Icon Style Circle */
+
+.fl-module-icon {
+	.fl-module-content {
+		.fl-icon {
+			i {
+				background: none;
+				border: 2px solid;
+				border-radius: 50%;
+				color: $accent-color;
+				font-size: $icon-size;
+				line-height: ($icon-size * 2) - 2px;
+				line-height: calc(2em - 2px);
+				width: 2em;
+				height: 2em;
+				text-align: center;
+
+				&::before {
+					background: none; 
+					color: inherit;
+					font-size: inherit;
+					line-height: inherit;
+				}
+			}
+		}
+	}
+}
+
+.fl-module-callout {
+	.fl-callout-icon-above-title, .fl-callout-icon-right-title, .fl-callout-icon-right, .fl-callout-icon-left-title, .fl-callout-icon-left {
+		.fl-icon {
+			i {
+				background: none;
+				border: 2px solid;
+				border-radius: 50%;
+				color: $accent-color;
+				font-size: $icon-size;
+				line-height: ($icon-size * 2) - 2px;
+				line-height: calc(2em - 2px);
+				width: 2em;
+				height: 2em;
+				text-align: center;
+
+				&::before {
+					background: none;
+					color: inherit;
+					font-size: inherit;
+					line-height: inherit;
+				}
+			}
+		}
+	}
+}
+
+.fl-module-callout {
+	.fl-callout-icon-right-title, .fl-callout-icon-right, .fl-callout-icon-left-title, .fl-callout-icon-left {
+		.fl-icon {
+			i {
+				background: none;
+				border: 2px solid;
+				border-radius: 50%;
+				color: $accent-color;
+				font-size: ($icon-size * .65);
+				line-height: ($icon-size * 2) - 2px;
+				line-height: calc(2em - 2px);
+				width: 2em;
+				height: 2em;
+			}
+		}
+	}
+}
+
+.alt-row, .alt-col, .row-col-bg {
+	.fl-module-icon {
+		.fl-module-content {
+			.fl-icon {
+				i {
+					color: set-heading-color($accent-color);
+				}
+			}
+		}
+	}
+
+	.fl-module-callout {
+		.fl-callout-icon-above-title, .fl-callout-icon-right-title, .fl-callout-icon-right, .fl-callout-icon-left-title, .fl-callout-icon-left {
+			.fl-icon {
+				i {
+					color: set-heading-color($accent-color);
+				}
+			}
+		}
+	}
+}
+
+.alt-row2, .alt-col2, .row-col-bg2 {
+	.fl-module-icon {
+		.fl-module-content {
+			.fl-icon {
+				i {
+					color: set-heading-color($sec-color);
+				}
+			}
+		}
+	}
+
+	.fl-module-callout {
+		.fl-callout-icon-above-title, .fl-callout-icon-right-title, .fl-callout-icon-right, .fl-callout-icon-left-title, .fl-callout-icon-left {
+			.fl-icon {
+				i {
+					color: set-heading-color($sec-color);
+				}
+			}
+		}
+	}
+}

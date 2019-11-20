@@ -1,0 +1,48 @@
+/* Icon Style Hexagon */
+
+.fl-module-icon {
+	.fl-module-content {
+		.fl-icon {
+			background: $pri-color;
+			display: block;
+			font-size: $icon-size;
+			height: 1.25em;
+			margin: 0.5em auto;
+			position: relative;
+			text-align: center;
+			width: 2em;
+
+			&::before, &::after {
+				border-left: 1em solid transparent;
+				border-right: 1em solid transparent;
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				width: 0;
+			}
+			&::before {
+				border-bottom: 0.5em solid $pri-color;
+				bottom: 100%;
+			}
+			&::after {
+				border-top: 0.5em solid $pri-color;
+				top: 100%;
+			}
+
+			i {
+				color: set-text-color($pri-color);
+				display: block;
+				float: none;
+				font-size: $icon-size;
+				line-height: 1.25em;
+
+				&::before {
+					color: inherit;
+					font-size: inherit;
+					line-height: inherit;
+				}
+			}
+		}
+	}
+}

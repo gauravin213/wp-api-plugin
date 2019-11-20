@@ -1,0 +1,42 @@
+/* Button Animation Fade */
+
+@mixin btn-fade($style) {
+	@if $style == flat {
+		&:hover {
+			background: $hover-color;
+			border: 0;
+			color: set-text-color($hover-color);
+			* {
+				color: set-text-color($hover-color);
+			}
+		}
+	} @elseif $style == border {
+		&:hover {
+			background: $hover-color;
+			border-color: $hover-color;
+			color: set-text-color($hover-color);
+			* {
+				color: set-text-color($hover-color);
+			}
+		}
+	} @elseif $style == gradient {
+		&:hover {
+			background: $hover-color;
+			background-image: linear-gradient(to bottom, $hover-color 0%, darken($hover-color, 20%) 100%);
+			color: set-text-color($hover-color);
+			* {
+				color: set-text-color($hover-color);
+			}
+		}
+	}
+}
+
+a.fl-button, a.fl-button:visited, .fl-builder-content a.fl-button, .fl-builder-content a.fl-button:visited,
+.fl-builder-content .fl-module-content-slider .fl-content-slider a.fl-button,
+.gform_wrapper button, .gform_wrapper input[type="button"], .gform_wrapper input[type="submit"],
+.woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page #content input.button.alt,
+.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button
+{
+	transition: all ease 0.3s;
+	@include btn-fade($btn-style);
+}
